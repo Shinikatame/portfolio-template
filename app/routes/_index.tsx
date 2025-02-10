@@ -19,7 +19,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="relative">
+    <div className="flex flex-col min-h-screen w-full">
       {/* background */}
       <div className="pointer-events-none fixed inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
@@ -27,11 +27,11 @@ export default function Index() {
         <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-500/10 blur-[100px]" />
       </div>
 
-      <div className="relative z-10">
+      <div className="flex flex-col min-h-[100dvh] z-10">
         {/* conteudo principal do seu portfolio */}
         <section
           id="hero"
-          className="h-screen flex flex-col items-center justify-center gap-16 pt-20"
+          className="h-screen flex flex-col items-center justify-center gap-16 py-20"
         >
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <div>
@@ -74,7 +74,7 @@ export default function Index() {
 
           {/* elemento decorativo */}
           <motion.div
-            className="p-20 flex flex-col items-center"
+            className="p-20 hidden flex-col items-center sm:block"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
